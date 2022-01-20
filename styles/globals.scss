@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "TT Commons";
+    src: url("/fonts/TTCommons/tt_commons_medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  :root {
+    font-size: 19px;
+    scroll-behavior: smooth;
+  }
+
+  p {
+    @apply text-gray-600;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    @apply text-gray-900;
+  }
+
+  h2 {
+    @apply font-medium text-6xl xl:text-8xl;
+  }
+
+  h3 {
+    @apply text-xl font-medium;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-500;
+
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    transition: all 150ms ease;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      @apply bg-purple-600;
+    }
+
+    &:active {
+      @apply bg-purple-700;
+    }
+
+    &:focus {
+      @apply outline-none ring-offset-2 ring-2 ring-purple-300;
+    }
+
+    &:disabled {
+      @apply bg-purple-300 cursor-not-allowed;
+    }
+  }
+}
