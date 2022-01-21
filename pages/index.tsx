@@ -3,6 +3,7 @@ import LogoJordanCortes from "../public/images/jordancortes";
 import IconLinkedin from "../public/images/icon-linkedin";
 import IconGithub from "../public/images/icon-github";
 import IconEmail from "../public/images/icon-email";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,14 +16,30 @@ export default function Home() {
         </h1>
 
         <div className="flex flex-col self-center space-y-4 mt-8">
-          <Button variant="secondary">View Work</Button>
-          <Button variant="secondary">View Resume</Button>
+          <Button variant="secondary" disabled>
+            View Work
+          </Button>
+          <Button variant="secondary" disabled>
+            View Resume
+          </Button>
         </div>
       </div>
       <div className="flex text-white grow-0 justify-center space-x-8 mb-4">
-        <IconEmail className="stroke-white" />
-        <IconGithub className="fill-white" />
-        <IconLinkedin className="fill-white" />
+        <Link href="mailto:hello@jordancortes.com">
+          <a>
+            <IconEmail className="stroke-white active:stroke-primary" />
+          </a>
+        </Link>
+        <Link href="https://github.com/jordancortes">
+          <a>
+            <IconGithub className="fill-white active:fill-primary" />
+          </a>
+        </Link>
+        <Link href="https://www.linkedin.com/in/jordancortesg/">
+          <a>
+            <IconLinkedin className="fill-white active:fill-primary" />
+          </a>
+        </Link>
       </div>
     </div>
   );
