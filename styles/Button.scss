@@ -1,0 +1,57 @@
+@layer components {
+  .btn {
+    @apply py-2 px-3 text-sm font-medium rounded-sm;
+
+    &:disabled {
+      @apply opacity-50 cursor-not-allowed;
+    }
+
+    &:focus {
+      @apply ring-2 ring-primary-light ring-offset-1;
+    }
+
+    &.primary {
+      @apply bg-primary text-white border border-transparent;
+
+      &:hover {
+        @apply bg-primary-dark;
+      }
+
+      &:active {
+        @apply bg-primary-darker;
+      }
+
+      &:focus {
+        @apply outline-none ring-offset-2 ring-2 ring-primary-light;
+      }
+
+      &:disabled {
+        @apply bg-primary-darker cursor-not-allowed;
+      }
+    }
+
+    &.secondary {
+      @apply bg-transparent text-primary border border-primary;
+
+      &:hover {
+        @apply text-white bg-primary;
+      }
+
+      &:active {
+        @apply bg-primary-dark border-primary-dark text-white;
+      }
+
+      &:focus {
+        @apply outline-none ring-offset-2 ring-2 ring-primary-light;
+      }
+
+      &:disabled {
+        @apply border-primary-light text-primary-light cursor-not-allowed;
+      }
+    }
+
+    &.btn-tertiary {
+      @apply text-primary underline;
+    }
+  }
+}
