@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-neutral-900 h-screen">
       <div className="flex flex-col grow justify-center">
-        <h1 className="text-white overflow-x-hidden text-3xl font-light">
+        <h1 className="text-white overflow-x-hidden text-3xl font-light md:text-4xl">
           <span className="ml-4 mb-4 block">Hi! 👋🏼 I&apos;m</span>
-          <LogoJordanCortes className="-ml-9 -mr-9 fill-white" />
+          <LogoJordanCortes className="-ml-9 -mr-9 fill-white md:-ml-20 md:-mr-20" />
           <span className="float-right mr-4 mt-4 block">a web developer</span>
         </h1>
 
-        <div className="flex flex-col self-center space-y-4 mt-8">
+        <div className="flex flex-col self-center space-y-4 mt-8 md:flex-row md:space-y-0 md:space-x-8 md:mt-12">
           <Button variant="secondary" disabled>
             View Work
           </Button>
@@ -24,7 +24,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="flex text-white grow-0 justify-center space-x-8 mb-4">
+      <div className="flex text-white grow-0 justify-center space-x-8 mb-4 md:mb-12">
         <Link href="mailto:hello@jordancortes.com">
           <a>
             <IconEmail className="stroke-white active:stroke-primary" />
