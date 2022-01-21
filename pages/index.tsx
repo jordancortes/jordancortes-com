@@ -15,7 +15,7 @@ export default function Home() {
           <span className="float-right mr-4 mt-4 block">a web developer</span>
         </h1>
 
-        <div className="flex flex-col self-center space-y-4 mt-8 md:flex-row md:space-y-0 md:space-x-8 md:mt-12">
+        <div className="flex flex-col self-center items-center space-y-4 mt-8 md:flex-row md:space-y-0 md:space-x-8 md:mt-12">
           <Button variant="secondary" disabled>
             View Work
           </Button>
